@@ -21,6 +21,7 @@ scale(a)
 scale(b)
 head(newdatafinal)
 summary(newdatafinal)
+
 # Assessing cluster tendency
 install.packages("clustertend")
 library(clustertend)
@@ -28,6 +29,10 @@ library(clustertend)
 set.seed(123)
 hopkins(newdatafinal, n = nrow(newdatafinal)-1)
 #Since the H value = 0.2411563 which is far below the threshold 0.5, it is highly clusterable
+
+# Determining Optimal Number of Clusters-  
+#http://www.sthda.com/english/articles/29-cluster-validation-essentials/96-determining-the-optimal-number-of-clusters-3-must-know-methods/
+
 
 # K-mean - Determining optimal number of clusters
 install.packages("NbClust")
